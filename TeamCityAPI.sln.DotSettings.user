@@ -13,7 +13,7 @@
     &lt;TestId&gt;NUnit3x::DBC5F149-CB0F-47ED-A68D-38D9E2D6BF22::net5.0::TeamCityAPITests.Tests.Test2&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=93d2f7ad_002Da89e_002D4b29_002D9adb_002De96b92d0daf1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="LocatorSerializeTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=93d2f7ad_002Da89e_002D4b29_002D9adb_002De96b92d0daf1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="LocatorSerializeTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;ProjectFile&gt;DBC5F149-CB0F-47ED-A68D-38D9E2D6BF22/f:UnitTest1.cs&lt;/ProjectFile&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bb73b2ad_002Df06e_002D4753_002Dbe8f_002D4b81ee634e13/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
@@ -22,7 +22,7 @@
     &lt;TestId&gt;NUnit3x::DBC5F149-CB0F-47ED-A68D-38D9E2D6BF22::net5.0::TeamCityAPITests.Tests.Test2&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=be2a3b80_002Db35e_002D4d2d_002Da2a4_002D207cd6c29e63/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test2 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=be2a3b80_002Db35e_002D4d2d_002Da2a4_002D207cd6c29e63/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test2 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::DBC5F149-CB0F-47ED-A68D-38D9E2D6BF22::net5.0::TeamCityAPITests.Tests.Test2&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::DBC5F149-CB0F-47ED-A68D-38D9E2D6BF22::net5.0::TeamCityAPITests.Tests.LocatorSerializeTest&lt;/TestId&gt;&#xD;

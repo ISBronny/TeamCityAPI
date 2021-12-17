@@ -7,12 +7,17 @@ namespace TeamCityAPI.Query
 {
     public class Field
     {
+        public static Field Short => new Field("$short");
+        public static Field Long => new Field("$long");
+        private Field(string name)
+        {
+            Name = name;
+        }
         public Field(PropertyInfo property)
         {
             Name = property.GetCustomAttribute<Newtonsoft.Json.JsonPropertyAttribute>()?.PropertyName ??
                    throw new InvalidOperationException();
         }
-
         public string Name { get; set; }
         public List<Field> Fields { get; set; } = new();
 

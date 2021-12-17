@@ -10,10 +10,10 @@ namespace TeamCityAPI.Query
     //     }
     //
     // }
-    internal class TcTcIncludableQuery<TEntity, TProperty> : TcQuery<TEntity>, ITcIncludableQuery<TEntity, TProperty> where TEntity : class
+    internal class TcIncludableQuery<TEntity, TProperty> : TcQuery<TEntity>, ITcIncludableQuery<TEntity, TProperty> where TEntity : class
     {
-        public TcTcIncludableQuery(ITcQuery tcQuery, PropertyInfo property) 
-            : base(tcQuery.Client, ((ITcQuery<TEntity>)tcQuery).RequestMethod)
+        public TcIncludableQuery(ITcQuery tcQuery, PropertyInfo property, IncludeType? includeType) 
+            : base(tcQuery.Client, ((ITcQuery<TEntity>)tcQuery).RequestMethod, tcQuery.Settings)
         {
             ((ITcIncludableQuery) this).Fields = tcQuery.Fields;
             var field = new Field(property);
@@ -26,9 +26,12 @@ namespace TeamCityAPI.Query
             {
                 ((ITcQuery) this).CurrentField = ((ITcQuery) this).Fields.Single(f => f.Name == field.Name);
             }
+
+            AddFieldsLoading(includeType ??= Settings.DefaultIncludeType);
         }
-        internal TcTcIncludableQuery(ITcIncludableQuery tcIncludableQuery, PropertyInfo property) 
-            : base(tcIncludableQuery.Client, ((ITcQuery<TEntity>)tcIncludableQuery).RequestMethod)
+        internal TcIncludableQuery(ITcIncludableQuery tcIncludableQuery, PropertyInfo property,
+            IncludeType? includeType) 
+            : base(tcIncludableQuery.Client, ((ITcQuery<TEntity>)tcIncludableQuery).RequestMethod, tcIncludableQuery.Settings)
         {
             ((ITcIncludableQuery) this).Fields = tcIncludableQuery.Fields;
             ((ITcIncludableQuery) this).CurrentField = tcIncludableQuery.CurrentField;
@@ -41,6 +44,21 @@ namespace TeamCityAPI.Query
             else
             {
                 ((ITcQuery) this).CurrentField = ((ITcQuery) this).CurrentField.Fields.Single(f => f.Name == field.Name);
+            }
+            
+            AddFieldsLoading(includeType ??= Settings.DefaultIncludeType);
+        }
+
+        private void AddFieldsLoading(IncludeType includeType)
+        {
+            switch (includeType)
+            {
+                case IncludeType.Short:
+                    ((ITcQuery) this).CurrentField.Add(Field.Short);
+                    break;
+                case IncludeType.Long:
+                    ((ITcQuery) this).CurrentField.Add(Field.Long);
+                    break;
             }
         }
     }

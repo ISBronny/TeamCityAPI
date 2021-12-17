@@ -9,33 +9,35 @@ namespace TeamCityAPI.Query
     {
         public static ITcIncludableQuery<TEntity, TProperty> ThenInclude<TEntity, TPreviousProperty, TProperty>(
             this ITcIncludableQuery<TEntity, IEnumerable<TPreviousProperty>> source,
-            Expression<Func<TPreviousProperty, TProperty>> navigationPropertyPath)
+            Expression<Func<TPreviousProperty, TProperty>> navigationPropertyPath, 
+            IncludeType? includeType = null)
             where TEntity : class
         {
             var propInfo = GetPropertyInfo(navigationPropertyPath);
-            TcTcIncludableQuery<TEntity, TProperty> tcTcIncludableQuery = new(source, propInfo);
-            return tcTcIncludableQuery;
+            TcIncludableQuery<TEntity, TProperty> tcIncludableQuery = new(source, propInfo, includeType);
+            return tcIncludableQuery;
         }
         
         public static ITcIncludableQuery<TEntity, TProperty> ThenInclude<TEntity, TPreviousProperty, TProperty>(
             this ITcIncludableQuery<TEntity, TPreviousProperty> source,
-            Expression<Func<TPreviousProperty, TProperty>> navigationPropertyPath)
+            Expression<Func<TPreviousProperty, TProperty>> navigationPropertyPath, 
+            IncludeType? includeType = null)
             where TEntity : class
         {
             var propInfo = GetPropertyInfo(navigationPropertyPath);
-            TcTcIncludableQuery<TEntity, TProperty> tcTcIncludableQuery = new(source, propInfo);
-            return tcTcIncludableQuery;
+            TcIncludableQuery<TEntity, TProperty> tcIncludableQuery = new(source, propInfo, includeType);
+            return tcIncludableQuery;
         }
 
         public static ITcIncludableQuery<TEntity, TProperty> Include<TEntity, TProperty>(
             this ITcQuery<TEntity> source,
-            Expression<Func<TEntity, TProperty>> navigationPropertyPath)
+            Expression<Func<TEntity, TProperty>> navigationPropertyPath, 
+            IncludeType? includeType = null)
             where TEntity : class
         {
-
             var propInfo = GetPropertyInfo(navigationPropertyPath);
-            TcTcIncludableQuery<TEntity, TProperty> tcTcIncludableQuery = new(source, propInfo);
-            return tcTcIncludableQuery;
+            TcIncludableQuery<TEntity, TProperty> tcIncludableQuery = new(source, propInfo, includeType);
+            return tcIncludableQuery;
         }
 
         private static PropertyInfo GetPropertyInfo<TEntity, TProperty>(Expression<Func<TEntity, TProperty>> navigationPropertyPath)
