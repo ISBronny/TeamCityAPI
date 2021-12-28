@@ -41,13 +41,13 @@ namespace TeamCityAPI
         //ToDo:
         //Uncomment
         public ITcQuery<Agents> Agents => new TcQuery<Agents>(this, GetAllAgentsAsync);
-        //public TcQuery<Branches> Branches => new(this, GetAllBranchesAsync);
+        //public ITcQuery<Branches> Branches => new TcQuery<Branches>(this, GetAllBranchesAsync);
         public ITcQuery<Builds> Builds => new TcQuery<Builds>(this, GetAllBuildsAsync);
         public ITcQuery<Changes> Changes => new TcQuery<Changes>(this, GetAllChangesAsync);
-        //public TcQuery<Groups> Groups => new(this, GetAllGroupsAsync);
+        public ITcQuery<Groups> Groups => new TcQuery<Groups>(this, (_, fields)=>GetAllGroupsAsync(fields));
         public ITcQuery<Investigations> Investigations => new TcQuery<Investigations>(this, GetAllInvestigationsAsync);
-        //public TcQuery<Metrics> Metrics => new(this, GetAllMetricsAsync);
-        //public TcQuery<Plugins> Plugins => new(this, GetAllPluginsAsync);
+        public ITcQuery<Metrics> Metrics => new TcQuery<Metrics>(this,  (_, fields)=>GetAllMetricsAsync(fields));
+        public ITcQuery<Plugins> Plugins => new TcQuery<Plugins>(this,  (_, fields)=>GetAllPluginsAsync(fields));
         public ITcQuery<Projects> Projects => new TcQuery<Projects>(this, GetAllProjectsAsync);
         public ITcQuery<Triggers> Triggers => new TcQuery<Triggers>(this, GetAllTriggersAsync);
         public ITcQuery<Users> Users => new TcQuery<Users>(this, GetAllUsersAsync);

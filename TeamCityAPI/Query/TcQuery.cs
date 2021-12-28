@@ -53,7 +53,7 @@ namespace TeamCityAPI.Query
 
         private string GetLocator()
         {
-            return LocatorSerializer.Serialize(((ITcQuery<TEntity>) this).Locator);
+            return ((ITcQuery<TEntity>) this).Locator.ToString();
         }
         
         public override string ToString() => $"locator={GetLocator()}&fields={GetFieldsUri()}";
