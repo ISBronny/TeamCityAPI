@@ -30,7 +30,7 @@ var builds = await client.Builds
 	})
 	.GetAsync();
 ```
-This query is similar to ``https://buildserver.mycompany.net/app/rest/builds?locator=agent:(name:linux-blade-076-vm-13),count:50`
+This query is similar to `https://buildserver.mycompany.net/app/rest/builds?locator=agent:(name:linux-blade-076-vm-13),count:50`
 
 ### Includes
 You can get children in request:
@@ -41,7 +41,7 @@ var query = client.Builds
 	.Include(x => x.Build)
 		 .ThenInclude(x => x.Agent)
 ```
-This query is similar to ``https://buildserver.mycompany.net/app/rest/builds?fields=$short,build($short,artifacts($short),agent($short))`
+This query is similar to `https://buildserver.mycompany.net/app/rest/builds?fields=$short,build($short,artifacts($short),agent($short))`
 
 Also there are two include types: **short** and **long**.
 Models can contain simple fields (bool, string, int, etc.) and composite (other models). If we use **IncludeType.Short**, then only simple fields will be loaded, and composite fields will be **null**. If we use **IncludeType.Long** then the composite fields will be loaded as well.
