@@ -9,7 +9,6 @@ namespace TeamCityAPI.Query
         internal TeamCityClient Client { get; set; }
         internal List<Field> Fields { get; set; }
         internal Field CurrentField { get; set; }
-        public TcQuerySettings Settings { get; set; }
     }
 
     public interface ITcQuery<TEntity> : ITcQuery where TEntity : class

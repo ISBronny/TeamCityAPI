@@ -12,8 +12,8 @@ namespace TeamCityAPI.Query
     // }
     internal class TcIncludableQuery<TEntity, TProperty> : TcQuery<TEntity>, ITcIncludableQuery<TEntity, TProperty> where TEntity : class
     {
-        public TcIncludableQuery(ITcQuery tcQuery, PropertyInfo property, IncludeType? includeType) 
-            : base(tcQuery.Client, ((ITcQuery<TEntity>)tcQuery).RequestMethod, tcQuery.Settings)
+        public TcIncludableQuery(ITcQuery tcQuery, PropertyInfo property, IncludeType? includeType = null) 
+            : base(tcQuery.Client, ((ITcQuery<TEntity>)tcQuery).RequestMethod)
         {
             ((ITcIncludableQuery) this).Fields = tcQuery.Fields;
             var field = new Field(property);
@@ -27,11 +27,11 @@ namespace TeamCityAPI.Query
                 ((ITcQuery) this).CurrentField = ((ITcQuery) this).Fields.Single(f => f.Name == field.Name);
             }
 
-            AddFieldsLoading(includeType ??= Settings.DefaultIncludeType);
+            AddFieldsLoading(includeType ?? ((ITcQuery) this).Client.Settings.DefaultIncludeType);
         }
         internal TcIncludableQuery(ITcIncludableQuery tcIncludableQuery, PropertyInfo property,
             IncludeType? includeType) 
-            : base(tcIncludableQuery.Client, ((ITcQuery<TEntity>)tcIncludableQuery).RequestMethod, tcIncludableQuery.Settings)
+            : base(tcIncludableQuery.Client, ((ITcQuery<TEntity>)tcIncludableQuery).RequestMethod)
         {
             ((ITcIncludableQuery) this).Fields = tcIncludableQuery.Fields;
             ((ITcIncludableQuery) this).CurrentField = tcIncludableQuery.CurrentField;
@@ -46,7 +46,7 @@ namespace TeamCityAPI.Query
                 ((ITcQuery) this).CurrentField = ((ITcQuery) this).CurrentField.Fields.Single(f => f.Name == field.Name);
             }
             
-            AddFieldsLoading(includeType ??= Settings.DefaultIncludeType);
+            AddFieldsLoading(includeType ?? ((ITcQuery) this).Client.Settings.DefaultIncludeType);
         }
 
         private void AddFieldsLoading(IncludeType includeType)

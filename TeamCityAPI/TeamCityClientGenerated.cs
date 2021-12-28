@@ -16,7 +16,7 @@ namespace TeamCityAPI
     public partial class TeamCityClient 
     {
         private HttpClient _httpClient;
-        private System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _settings;
+        private System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _serializerSettings;
 
         private Newtonsoft.Json.JsonSerializerSettings CreateSerializerSettings()
         {
@@ -27,7 +27,7 @@ namespace TeamCityAPI
     
         public string BaseUrl { get; set; }
     
-        protected Newtonsoft.Json.JsonSerializerSettings JsonSerializerSettings { get { return _settings.Value; } }
+        protected Newtonsoft.Json.JsonSerializerSettings JsonSerializerSettings { get { return _serializerSettings.Value; } }
     
         partial void UpdateJsonSerializerSettings(Newtonsoft.Json.JsonSerializerSettings settings);
     
@@ -219,7 +219,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -546,7 +546,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -714,7 +714,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -797,7 +797,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -1102,7 +1102,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -1510,7 +1510,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -1683,7 +1683,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -1941,7 +1941,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -2199,7 +2199,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -2370,7 +2370,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -3077,7 +3077,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -3231,7 +3231,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -3404,7 +3404,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -3576,7 +3576,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -3729,7 +3729,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -4048,7 +4048,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -4371,7 +4371,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -4459,7 +4459,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -4640,7 +4640,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -4888,7 +4888,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -5146,7 +5146,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -5234,7 +5234,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -5415,7 +5415,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -5663,7 +5663,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -6095,7 +6095,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -6183,7 +6183,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -6364,7 +6364,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -6614,7 +6614,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -6793,7 +6793,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -6972,7 +6972,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -7234,7 +7234,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -7322,7 +7322,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -7568,7 +7568,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -7808,7 +7808,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -7979,7 +7979,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -8150,7 +8150,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -8403,7 +8403,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -8491,7 +8491,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -8672,7 +8672,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -8914,7 +8914,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -9002,7 +9002,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -9183,7 +9183,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -9433,7 +9433,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -9612,7 +9612,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -9791,7 +9791,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -9968,7 +9968,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -10060,7 +10060,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -10466,7 +10466,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -10554,7 +10554,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -10735,7 +10735,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -10983,7 +10983,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -11156,7 +11156,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -11244,7 +11244,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -11425,7 +11425,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -11665,7 +11665,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -12376,7 +12376,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -12783,7 +12783,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -12956,7 +12956,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -13129,7 +13129,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -13217,7 +13217,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -13305,7 +13305,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("DELETE");
@@ -13478,7 +13478,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -14418,7 +14418,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -14712,7 +14712,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -14800,7 +14800,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -14948,7 +14948,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -15121,7 +15121,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -15294,7 +15294,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -15720,7 +15720,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -16192,7 +16192,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -16369,7 +16369,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -16461,7 +16461,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -16723,7 +16723,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -17900,7 +17900,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -18789,7 +18789,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -18873,7 +18873,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -19046,7 +19046,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -19282,7 +19282,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -19366,7 +19366,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -19534,7 +19534,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("DELETE");
@@ -20025,7 +20025,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -20343,7 +20343,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -20431,7 +20431,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -20677,7 +20677,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -20850,7 +20850,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -21093,7 +21093,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -21266,7 +21266,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -21443,7 +21443,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -21531,7 +21531,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -21777,7 +21777,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -22017,7 +22017,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -22188,7 +22188,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -22359,7 +22359,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -22532,7 +22532,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -22709,7 +22709,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -22797,7 +22797,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -22978,7 +22978,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -23130,7 +23130,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -23467,7 +23467,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -23638,7 +23638,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -24585,7 +24585,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -25482,7 +25482,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -25805,7 +25805,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -26061,7 +26061,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -26293,7 +26293,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -26376,7 +26376,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -26795,7 +26795,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -26968,7 +26968,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -27273,7 +27273,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -27781,7 +27781,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -28013,7 +28013,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -28096,7 +28096,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -28519,7 +28519,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -28759,7 +28759,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -29853,7 +29853,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -30169,7 +30169,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -30407,7 +30407,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("POST");
@@ -30815,7 +30815,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -31051,7 +31051,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");
@@ -31371,7 +31371,7 @@ namespace TeamCityAPI
             {
                 using (var request_ = new HttpRequestMessage())
                 {
-                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _settings.Value));
+                    var content_ = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(body, _serializerSettings.Value));
                     content_.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("text/plain");
                     request_.Content = content_;
                     request_.Method = new HttpMethod("PUT");

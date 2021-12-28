@@ -23,9 +23,9 @@
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=be2a3b80_002Db35e_002D4d2d_002Da2a4_002D207cd6c29e63/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test2 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::DBC5F149-CB0F-47ED-A68D-38D9E2D6BF22::net5.0::TeamCityAPITests.Tests.Test2&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::DBC5F149-CB0F-47ED-A68D-38D9E2D6BF22::net5.0::TeamCityAPITests.Tests.LocatorSerializeTest&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;ProjectFile&gt;DBC5F149-CB0F-47ED-A68D-38D9E2D6BF22/f:IncludeTest.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;DBC5F149-CB0F-47ED-A68D-38D9E2D6BF22/f:LocatorTest.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Includable/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

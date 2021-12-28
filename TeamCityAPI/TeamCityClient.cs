@@ -9,15 +9,21 @@ using TeamCityAPI.Query;
 
 namespace TeamCityAPI
 {
+    public class Settings
+    {
+        public IncludeType DefaultIncludeType { get; set; } = IncludeType.Short;
+    }
     public partial class TeamCityClient
     {
+        public Settings Settings { get; set; }
         public TeamCityClient(string baseUrl)
         {
             BaseUrl = baseUrl.TrimEnd('/');
             _httpClient = new HttpClient();
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             _httpClient.DefaultRequestHeaders.CacheControl = new CacheControlHeaderValue { NoCache = true };
-            _settings = new System.Lazy<Newtonsoft.Json.JsonSerializerSettings>(CreateSerializerSettings);
+            _serializerSettings = new Lazy<Newtonsoft.Json.JsonSerializerSettings>(CreateSerializerSettings);
+            Settings = new Settings();
         }
 
         public void UseLoginAndPass(string user, string password)

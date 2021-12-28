@@ -12,15 +12,13 @@ namespace TeamCityAPI.Query
         List<Field> ITcQuery.Fields { get; set; } = new List<Field>();
         Field ITcQuery.CurrentField { get; set; }
 
-        public TcQuerySettings Settings { get; set; }
-        
-        
-        public TcQuery(TeamCityClient client, TcQuerySettings? settings = null)
+
+        public TcQuery(TeamCityClient client)
         {
             ((ITcQuery) this).Client = client;
-            Settings = settings ?? new TcQuerySettings();
+            //((ITcQuery) this).Settings = settings ?? new TcQuerySettings();
             
-            switch (Settings.DefaultIncludeType)
+            switch ( ((ITcQuery) this).Client.Settings.DefaultIncludeType)
             {
                 case IncludeType.Short:
                     ((ITcQuery) this).Fields.Add(Field.Short);
@@ -39,12 +37,7 @@ namespace TeamCityAPI.Query
         {
             ((ITcQuery<TEntity>) this).RequestMethod = requestMethod;
         }
-        
-        public TcQuery(TeamCityClient client, Func<string,string,Task<TEntity>> requestMethod, TcQuerySettings settings) : this(client, requestMethod)
-        {
-            Settings = settings;
-        }
-        
+
         public ITcQuery<TEntity> WithLocator(Locator locator)
         {
             ((ITcQuery<TEntity>) this).Locator = locator;
@@ -63,7 +56,7 @@ namespace TeamCityAPI.Query
             return LocatorSerializer.Serialize(((ITcQuery<TEntity>) this).Locator);
         }
         
-        public override string ToString() => $"{GetFieldsUri()}";
+        public override string ToString() => $"locator={GetLocator()}&fields={GetFieldsUri()}";
 
     }
     

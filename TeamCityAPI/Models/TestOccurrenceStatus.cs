@@ -6,8 +6,8 @@
         [System.Runtime.Serialization.EnumMember(Value = @"UNKNOWN")]
         UNKNOWN = 0,
     
-        [System.Runtime.Serialization.EnumMember(Value = @"NORMAL")]
-        NORMAL = 1,
+        [System.Runtime.Serialization.EnumMember(Value = @"SUCCESS")]
+        SUCCESS = 1,
     
         [System.Runtime.Serialization.EnumMember(Value = @"WARNING")]
         WARNING = 2,
