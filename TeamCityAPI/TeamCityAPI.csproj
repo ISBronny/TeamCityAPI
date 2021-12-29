@@ -5,6 +5,16 @@
         <Nullable>enable</Nullable>
         <LangVersion>10</LangVersion>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageVersion>0.1.0</PackageVersion>
+        <Title>TeamCity API</Title>
+        <Authors>Ivan Braiko</Authors>
+        <Description>Implementation of TeamCity API</Description>
+        <PackageLicenseUrl>https://github.com/ISBronny/TeamCityAPI/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/ISBronny/TeamCityAPI</RepositoryUrl>
+        <PackageTags>TeamCity, API</PackageTags>
+        <Company />
+        <PackageProjectUrl>https://github.com/ISBronny/TeamCityAPI/tree/master</PackageProjectUrl>
     </PropertyGroup>
 
     <ItemGroup>

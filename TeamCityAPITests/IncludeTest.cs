@@ -38,7 +38,7 @@ namespace TeamCityAPITests
                 .WithLocator(new BuildLocator()
                 {
                     Agent = new AgentLocator() {Name = "intellij-linux-blade-076-vm-13"},
-                    Count = 5
+                    Count = 50,
                 });
             
             var res = await query.GetAsync();
