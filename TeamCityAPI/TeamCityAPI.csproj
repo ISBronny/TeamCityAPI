@@ -6,7 +6,7 @@
         <LangVersion>10</LangVersion>
         <TargetFramework>netstandard2.0</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>0.1.0</PackageVersion>
+        <PackageVersion>0.1.1</PackageVersion>
         <Title>TeamCity API</Title>
         <Authors>Ivan Braiko</Authors>
         <Description>Implementation of TeamCity API</Description>
@@ -18,15 +18,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <None Remove="swagger.json" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Folder Include="Attributes" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <OpenApiReference Include="swagger.json" ClassName="TeamCityClientGenerated" CodeGenerator="NSwagCSharp" Namespace="TeamCityAPI" />
     </ItemGroup>
 
     <ItemGroup>
@@ -39,6 +31,10 @@
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="swagger.json" ClassName="TeamCityClientGenerated" />
     </ItemGroup>
 
 </Project>

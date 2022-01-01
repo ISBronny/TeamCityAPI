@@ -1,8 +1,9 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=3B838A3A_002DD56B_002D4269_002D960F_002DAC82CB92EB77_002Ff_003ATeamCityClientGenerated_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3618113b_002D73fa_002D425b_002Dab59_002Da89833e3790e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ShortInclude" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3618113b_002D73fa_002D425b_002Dab59_002Da89833e3790e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ShortInclude" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::DBC5F149-CB0F-47ED-A68D-38D9E2D6BF22::net5.0::TeamCityAPITests.IncludeTest.ShortInclude&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::DBC5F149-CB0F-47ED-A68D-38D9E2D6BF22::net5.0::TeamCityAPITests.IncludeTest.IssueTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	
@@ -27,7 +28,7 @@
     &lt;TestId&gt;NUnit3x::DBC5F149-CB0F-47ED-A68D-38D9E2D6BF22::net5.0::TeamCityAPITests.Tests.Test2&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=be2a3b80_002Db35e_002D4d2d_002Da2a4_002D207cd6c29e63/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test2 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=be2a3b80_002Db35e_002D4d2d_002Da2a4_002D207cd6c29e63/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test2 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Project Location="C:\Users\Ivan.Braiko\RiderProjects\TeamCityAPI\TeamCityAPITests" Presentation="&amp;lt;TeamCityAPITests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Includable/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

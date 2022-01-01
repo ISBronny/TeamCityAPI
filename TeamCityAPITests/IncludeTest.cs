@@ -38,7 +38,7 @@ namespace TeamCityAPITests
                 .WithLocator(new BuildLocator()
                 {
                     Agent = new AgentLocator() {Name = "intellij-linux-blade-076-vm-13"},
-                    Count = 50,
+                    Count = 5,
                 });
             
             var res = await query.GetAsync();
@@ -67,6 +67,12 @@ namespace TeamCityAPITests
             Assert.That(tests.TestOccurrence.Select(t => t.Metadata), Is.All.Null);
             Assert.That(tests.TestOccurrence.Select(t => t.Mute), Is.All.Null);
             Assert.That(tests.TestOccurrence.Select(t => t.FirstFailed), Is.All.Null);
+        }
+
+        [Test]
+        public async Task IssueTest()
+        {
+            var res = await Client.BuildTypes.GetAsync();
         }
     }
 }
