@@ -1,8 +1,11 @@
-﻿namespace TeamCityAPI
+﻿using TeamCityAPI.Locators.Common;
+using TeamCityAPI.Locators.Enums;
+
+namespace TeamCityAPI.Locators
 {
     /// <summary>Represents a locator string for filtering TestOccurrence entities.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v12.0.0.0)")]
-    public partial class TestOccurrenceLocator : Locator
+    public partial class TestOccurrenceLocator : PagedLocator
     {
         /// <summary>Project (direct or indirect parent) locator.</summary>
         [Newtonsoft.Json.JsonProperty("affectedProject", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -18,11 +21,7 @@
         /// <summary>Build type locator.</summary>
         [Newtonsoft.Json.JsonProperty("buildType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public BuildTypeLocator BuildType { get; set; }
-    
-        /// <summary>For paginated calls, how many entities to return per page.</summary>
-        [Newtonsoft.Json.JsonProperty("count", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? Count { get; set; }
-    
+
         /// <summary>Is currently failing.</summary>
         [Newtonsoft.Json.JsonProperty("currentlyFailing", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool? CurrentlyFailing { get; set; }
@@ -62,11 +61,7 @@
     
         [Newtonsoft.Json.JsonProperty("newFailure", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string NewFailure { get; set; }
-    
-        /// <summary>For paginated calls, from which entity to start rendering the page.</summary>
-        [Newtonsoft.Json.JsonProperty("start", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? Start { get; set; }
-    
+
         [Newtonsoft.Json.JsonProperty("status", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         public TestOccurrenceLocatorStatus? Status { get; set; }
@@ -74,7 +69,5 @@
         /// <summary>Test locator.</summary>
         [Newtonsoft.Json.JsonProperty("test", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public TestLocator Test { get; set; }
-    
-    
     }
 }

@@ -4,7 +4,11 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestPlatform.Utilities;
 using NUnit.Framework;
 using TeamCityAPI;
-using TeamCityAPI.Query;
+using TeamCityAPI.Locators;
+using TeamCityAPI.Locators.Enums;
+using TeamCityAPI.Models;
+using TeamCityAPI.Queries;
+using TeamCityAPI.Queries.Common;
 
 namespace TeamCityAPITests
 {

@@ -1,4 +1,4 @@
-﻿namespace TeamCityAPI
+﻿namespace TeamCityAPI.Models
 {
     /// <summary>Represents the specific file change (in the scope of the commit).</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v12.0.0.0)")]

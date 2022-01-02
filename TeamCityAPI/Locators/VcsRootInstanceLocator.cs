@@ -1,8 +1,11 @@
-﻿namespace TeamCityAPI
+﻿using TeamCityAPI.Locators.Common;
+using TeamCityAPI.Locators.Enums;
+
+namespace TeamCityAPI.Locators
 {
     /// <summary>Represents a locator string for filtering VcsRootInstance entities.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v12.0.0.0)")]
-    public partial class VcsRootInstanceLocator : Locator
+    public partial class VcsRootInstanceLocator : PagedLocator
     {
         /// <summary>Project (direct or indirect parent) locator.</summary>
         [Newtonsoft.Json.JsonProperty("affectedProject", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -15,11 +18,7 @@
         /// <summary>Build type locator.</summary>
         [Newtonsoft.Json.JsonProperty("buildType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public BuildTypeLocator BuildType { get; set; }
-    
-        /// <summary>For paginated calls, how many entities to return per page.</summary>
-        [Newtonsoft.Json.JsonProperty("count", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? Count { get; set; }
-    
+
         /// <summary>Entity ID.</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public int? Id { get; set; }
@@ -39,11 +38,7 @@
         [Newtonsoft.Json.JsonProperty("property", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         public VcsRootInstanceLocatorProperty? Property { get; set; }
-    
-        /// <summary>For paginated calls, from which entity to start rendering the page.</summary>
-        [Newtonsoft.Json.JsonProperty("start", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? Start { get; set; }
-    
+
         /// <summary>Type of VCS (e.g. jetbrains.git).</summary>
         [Newtonsoft.Json.JsonProperty("type", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Type { get; set; }

@@ -1,8 +1,10 @@
-﻿namespace TeamCityAPI
+﻿using TeamCityAPI.Models.Common;
+
+namespace TeamCityAPI.Models
 {
     /// <summary>Represents an investigation of a build problem.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v12.0.0.0)")]
-    public partial class Investigation 
+    public partial class Investigation : TcModel
     {
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Id { get; set; }

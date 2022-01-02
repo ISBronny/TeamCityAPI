@@ -1,4 +1,4 @@
-﻿namespace TeamCityAPI
+﻿namespace TeamCityAPI.Models
 {
     /// <summary>Represents the current enablement status of the agent.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v12.0.0.0)")]

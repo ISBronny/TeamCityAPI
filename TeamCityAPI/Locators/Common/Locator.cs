@@ -1,6 +1,6 @@
-﻿using TeamCityAPI.Serializer;
+﻿using TeamCityAPI.Locators.Serializer;
 
-namespace TeamCityAPI
+namespace TeamCityAPI.Locators.Common
 {
     public abstract class Locator
     {

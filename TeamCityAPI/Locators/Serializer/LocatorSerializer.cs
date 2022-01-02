@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
+﻿using System.Reflection;
 using Newtonsoft.Json;
+using TeamCityAPI.Locators.Common;
 
-namespace TeamCityAPI.Serializer
+namespace TeamCityAPI.Locators.Serializer
 {
     public class LocatorSerializer
     {

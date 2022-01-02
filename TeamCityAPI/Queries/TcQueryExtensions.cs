@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 using System.Reflection;
+using TeamCityAPI.Models.Common;
+using TeamCityAPI.Queries.Common;
+using TeamCityAPI.Queries.Interfaces;
 
-namespace TeamCityAPI.Query
+namespace TeamCityAPI.Queries
 {
     public static class TcQueryExtensions
     {
@@ -11,10 +12,21 @@ namespace TeamCityAPI.Query
             this ITcIncludableQuery<TEntity, IEnumerable<TPreviousProperty>> source,
             Expression<Func<TPreviousProperty, TProperty>> navigationPropertyPath, 
             IncludeType? includeType = null)
-            where TEntity : class
+            where TEntity : TcModel
         {
             var propInfo = GetPropertyInfo(navigationPropertyPath);
             TcIncludableQuery<TEntity, TProperty> tcIncludableQuery = new(source, propInfo, includeType);
+            return tcIncludableQuery;
+        }
+        
+        public static ITcPagedIncludableQuery<TEntity, TProperty> ThenInclude<TEntity, TPreviousProperty, TProperty>(
+            this ITcPagedIncludableQuery<TEntity, IEnumerable<TPreviousProperty>> source,
+            Expression<Func<TPreviousProperty, TProperty>> navigationPropertyPath, 
+            IncludeType? includeType = null)
+            where TEntity : Page
+        {
+            var propInfo = GetPropertyInfo(navigationPropertyPath);
+            TcPagedIncludableQuery<TEntity, TProperty> tcIncludableQuery = new(source, propInfo, includeType);
             return tcIncludableQuery;
         }
         
@@ -22,10 +34,21 @@ namespace TeamCityAPI.Query
             this ITcIncludableQuery<TEntity, TPreviousProperty> source,
             Expression<Func<TPreviousProperty, TProperty>> navigationPropertyPath, 
             IncludeType? includeType = null)
-            where TEntity : class
+            where TEntity : TcModel
         {
             var propInfo = GetPropertyInfo(navigationPropertyPath);
             TcIncludableQuery<TEntity, TProperty> tcIncludableQuery = new(source, propInfo, includeType);
+            return tcIncludableQuery;
+        }
+        
+        public static ITcPagedIncludableQuery<TEntity, TProperty> ThenInclude<TEntity, TPreviousProperty, TProperty>(
+            this ITcPagedIncludableQuery<TEntity, TPreviousProperty> source,
+            Expression<Func<TPreviousProperty, TProperty>> navigationPropertyPath, 
+            IncludeType? includeType = null)
+            where TEntity : Page
+        {
+            var propInfo = GetPropertyInfo(navigationPropertyPath);
+            TcPagedIncludableQuery<TEntity, TProperty> tcIncludableQuery = new(source, propInfo, includeType);
             return tcIncludableQuery;
         }
 
@@ -33,10 +56,21 @@ namespace TeamCityAPI.Query
             this ITcQuery<TEntity> source,
             Expression<Func<TEntity, TProperty>> navigationPropertyPath, 
             IncludeType? includeType = null)
-            where TEntity : class
+            where TEntity : TcModel
         {
             var propInfo = GetPropertyInfo(navigationPropertyPath);
             TcIncludableQuery<TEntity, TProperty> tcIncludableQuery = new(source, propInfo, includeType);
+            return tcIncludableQuery;
+        }
+        
+        public static ITcPagedIncludableQuery<TEntity, TProperty> Include<TEntity, TProperty>(
+            this ITcPagedQuery<TEntity> source,
+            Expression<Func<TEntity, TProperty>> navigationPropertyPath, 
+            IncludeType? includeType = null)
+            where TEntity : Page
+        {
+            var propInfo = GetPropertyInfo(navigationPropertyPath);
+            TcPagedIncludableQuery<TEntity, TProperty> tcIncludableQuery = new(source, propInfo, includeType);
             return tcIncludableQuery;
         }
 

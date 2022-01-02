@@ -1,8 +1,10 @@
-﻿namespace TeamCityAPI
+﻿using TeamCityAPI.Locators.Common;
+
+namespace TeamCityAPI.Locators
 {
     /// <summary>Represents a locator string for filtering ProblemOccurrence entities.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v12.0.0.0)")]
-    public partial class ProblemOccurrenceLocator : Locator
+    public partial class ProblemOccurrenceLocator : PagedLocator
     {
         /// <summary>Project (direct or indirect parent) locator.</summary>
         [Newtonsoft.Json.JsonProperty("affectedProject", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11,11 +13,7 @@
         /// <summary>Build locator.</summary>
         [Newtonsoft.Json.JsonProperty("build", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public BuildLocator Build { get; set; }
-    
-        /// <summary>For paginated calls, how many entities to return per page.</summary>
-        [Newtonsoft.Json.JsonProperty("count", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? Count { get; set; }
-    
+
         /// <summary>Is currently failing.</summary>
         [Newtonsoft.Json.JsonProperty("currentlyFailing", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool? CurrentlyFailing { get; set; }
@@ -45,11 +43,7 @@
     
         [Newtonsoft.Json.JsonProperty("problem", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Problem { get; set; }
-    
-        /// <summary>For paginated calls, from which entity to start rendering the page.</summary>
-        [Newtonsoft.Json.JsonProperty("start", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? Start { get; set; }
-    
+
         [Newtonsoft.Json.JsonProperty("type", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Type { get; set; }
     

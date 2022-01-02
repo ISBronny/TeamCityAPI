@@ -1,4 +1,4 @@
-﻿namespace TeamCityAPI
+﻿namespace TeamCityAPI.Models
 {
     /// <summary>Represents a test results counter (how many times this test was successful/failed/muted/ignored).</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v12.0.0.0)")]

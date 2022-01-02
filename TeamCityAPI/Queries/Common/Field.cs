@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
+﻿using System.Reflection;
 
-namespace TeamCityAPI.Query
+namespace TeamCityAPI.Queries.Common
 {
     public class Field
     {

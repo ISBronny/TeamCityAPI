@@ -1,8 +1,10 @@
-﻿namespace TeamCityAPI
+﻿using TeamCityAPI.Locators.Common;
+
+namespace TeamCityAPI.Locators
 {
     /// <summary>Represents a locator string for filtering Change entities.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v12.0.0.0)")]
-    public partial class ChangeLocator : Locator
+    public partial class ChangeLocator : PagedLocator
     {
         /// <summary>Build locator.</summary>
         [Newtonsoft.Json.JsonProperty("build", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14,11 +16,7 @@
     
         [Newtonsoft.Json.JsonProperty("comment", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Comment { get; set; }
-    
-        /// <summary>For paginated calls, how many entities to return per page.</summary>
-        [Newtonsoft.Json.JsonProperty("count", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? Count { get; set; }
-    
+
         [Newtonsoft.Json.JsonProperty("file", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string File { get; set; }
     
@@ -44,11 +42,7 @@
         /// <summary>Commit SHA since which the changes should be returned.</summary>
         [Newtonsoft.Json.JsonProperty("sinceChange", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string SinceChange { get; set; }
-    
-        /// <summary>For paginated calls, from which entity to start rendering the page.</summary>
-        [Newtonsoft.Json.JsonProperty("start", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? Start { get; set; }
-    
+
         /// <summary>User locator.</summary>
         [Newtonsoft.Json.JsonProperty("user", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public UserLocator User { get; set; }

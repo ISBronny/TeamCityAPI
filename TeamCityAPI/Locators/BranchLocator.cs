@@ -1,4 +1,7 @@
-﻿namespace TeamCityAPI
+﻿using TeamCityAPI.Locators.Common;
+using TeamCityAPI.Locators.Enums;
+
+namespace TeamCityAPI.Locators
 {
     /// <summary>Represents a locator string for filtering Branch entities.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v12.0.0.0)")]

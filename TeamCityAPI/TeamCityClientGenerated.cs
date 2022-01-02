@@ -1,5 +1,8 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
+using TeamCityAPI.Models;
+using File = TeamCityAPI.Models.File;
+using Type = TeamCityAPI.Models.Type;
 
 namespace TeamCityAPI
 {

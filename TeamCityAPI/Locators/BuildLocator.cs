@@ -1,8 +1,11 @@
-﻿namespace TeamCityAPI
+﻿using TeamCityAPI.Locators.Common;
+using TeamCityAPI.Locators.Enums;
+
+namespace TeamCityAPI.Locators
 {
     /// <summary>Represents a locator string for filtering Build entities.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v12.0.0.0)")]
-    public partial class BuildLocator : Locator
+    public partial class BuildLocator : PagedLocator
     {
         /// <summary>Project (direct or indirect parent) locator.</summary>
         [Newtonsoft.Json.JsonProperty("affectedProject", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -42,11 +45,7 @@
         /// <summary>Is composite.</summary>
         [Newtonsoft.Json.JsonProperty("composite", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool? Composite { get; set; }
-    
-        /// <summary>For paginated calls, how many entities to return per page.</summary>
-        [Newtonsoft.Json.JsonProperty("count", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? Count { get; set; }
-    
+
         /// <summary>If true, applies default filter which returns only "normal" builds (finished builds which are not canceled, not failed-to-start, not personal, and on default branch (in branched build configurations)).</summary>
         [Newtonsoft.Json.JsonProperty("defaultFilter", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool? DefaultFilter { get; set; }
@@ -116,11 +115,7 @@
     
         [Newtonsoft.Json.JsonProperty("snapshotDependency", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string SnapshotDependency { get; set; }
-    
-        /// <summary>For paginated calls, from which entity to start rendering the page.</summary>
-        [Newtonsoft.Json.JsonProperty("start", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? Start { get; set; }
-    
+
         /// <summary>Requires either date or build dimension.</summary>
         [Newtonsoft.Json.JsonProperty("startDate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string StartDate { get; set; }

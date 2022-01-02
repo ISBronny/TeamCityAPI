@@ -2,7 +2,9 @@
 using System.Threading.Tasks;
 using NUnit.Framework;
 using TeamCityAPI;
-using TeamCityAPI.Query;
+using TeamCityAPI.Locators;
+using TeamCityAPI.Queries;
+using TeamCityAPI.Queries.Common;
 
 namespace TeamCityAPITests
 {

@@ -1,4 +1,4 @@
-﻿namespace TeamCityAPI
+﻿namespace TeamCityAPI.Models
 {
     /// <summary>Represents a compatibility relation between the agent and build configuration.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v12.0.0.0)")]

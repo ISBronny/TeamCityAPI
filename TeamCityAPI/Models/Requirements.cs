@@ -1,4 +1,4 @@
-﻿namespace TeamCityAPI
+﻿namespace TeamCityAPI.Models
 {
     /// <summary>Represents a list of unmet requirements of a build.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.5.2.0 (Newtonsoft.Json v12.0.0.0)")]
