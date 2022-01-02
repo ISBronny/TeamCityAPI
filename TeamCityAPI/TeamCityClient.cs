@@ -204,7 +204,7 @@ namespace TeamCityAPI
                     using (var jsonTextReader = new Newtonsoft.Json.JsonTextReader(streamReader))
                     {
                         var serializer = Newtonsoft.Json.JsonSerializer.Create(JsonSerializerSettings);
-                        var typedBody = serializer.Deserialize<T>(jsonTextReader);
+                        var typedBody = (T)serializer.Deserialize(jsonTextReader, type);
                         return new ObjectResponseResult<T>(typedBody, string.Empty);
                     }
                 }

@@ -41,12 +41,16 @@ public abstract class Page<T> : Page, IAsyncEnumerable<Page<T>>  where T : TcMod
 
     public async Task<Page<T>> GetNextAsync()
     {
-        return await Client.GetPage<Page<T>>(NextHref, GetType());
+        var page = await Client.GetPage<Page<T>>(NextHref, GetType());
+        page.Client = Client;
+        return page;
     }
 
     public async Task<Page<T>> GetPrevAsync()
     {
-        return await Client.GetPage<Page<T>>(PrevHref, GetType());
+        var page = await Client.GetPage<Page<T>>(PrevHref, GetType());
+        page.Client = Client;
+        return page;
     }
     
     public abstract ICollection<T> Value { get; }

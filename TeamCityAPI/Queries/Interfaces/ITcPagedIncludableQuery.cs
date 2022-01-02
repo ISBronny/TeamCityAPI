@@ -2,12 +2,12 @@
 
 namespace TeamCityAPI.Queries.Interfaces;
 
-public interface ITcPagedIncludableQuery : ITcPagedQuery
+public interface ITcPagedIncludableQuery : ITcPagedQuery, IBaseIncludableQuery
 {
     
 }
 
-public interface ITcPagedIncludableQuery<TEntity, out TProperty> : ITcPagedIncludableQuery, ITcPagedQuery<TEntity> where TEntity : Page
+public interface ITcPagedIncludableQuery<TEntity, out TProperty> : IBaseIncludableQuery<TEntity, TProperty>, ITcPagedIncludableQuery, ITcPagedQuery<TEntity> where TEntity : Page
 {
        
 }

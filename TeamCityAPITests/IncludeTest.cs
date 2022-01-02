@@ -13,11 +13,12 @@ namespace TeamCityAPITests
         [Test]
         public async Task SimpleInclude()
         {
-            var builds = await Client.Builds
+            var query = Client.Builds
                 .Include(x => x.Build)
                 .ThenInclude(x => x.Agent)
-                .WithLocator(new BuildLocator() {Count = 10})
-                .GetAsync();
+                .WithLocator(new BuildLocator() {Count = 10});
+            var str = query.ToString();
+            var builds = await query.GetAsync();
             
             Assert.AreEqual(10, builds.Count);
             Assert.AreEqual(10, builds.Build.Count);
@@ -42,7 +43,7 @@ namespace TeamCityAPITests
                     Agent = new AgentLocator() {Name = "intellij-linux-blade-076-vm-13"},
                     Count = 5,
                 });
-            
+            var text = query.ToString();
             var res = await query.GetAsync();
 
             Assert.AreEqual(5, res.Count);
@@ -58,7 +59,7 @@ namespace TeamCityAPITests
                 .WithLocator(new TestOccurrenceLocator()
                 {
                     Count = 5,
-                    Build = new BuildLocator { Id = 156770153}
+                    Build = new BuildLocator { Id = 159046945}
                 });
             var tests = await query.GetAsync();
 

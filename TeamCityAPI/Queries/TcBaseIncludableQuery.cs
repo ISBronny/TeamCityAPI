@@ -7,7 +7,7 @@ namespace TeamCityAPI.Queries;
 
 abstract class TcBaseIncludableQuery<TEntity, TProperty> : TcBaseQuery<TEntity>, IBaseIncludableQuery where TEntity : TcModel
     {
-        public TcBaseIncludableQuery(IBaseQuery tcQuery, PropertyInfo property, IncludeType? includeType = null) 
+        internal TcBaseIncludableQuery(IBaseQuery tcQuery, PropertyInfo property, IncludeType? includeType = null) 
             : base(tcQuery.Client, ((IBaseQuery<TEntity>)tcQuery).RequestMethod)
         {
             ((IBaseIncludableQuery) this).Fields = tcQuery.Fields;
@@ -26,7 +26,7 @@ abstract class TcBaseIncludableQuery<TEntity, TProperty> : TcBaseQuery<TEntity>,
         }
         
         internal TcBaseIncludableQuery(IBaseIncludableQuery tcIncludableQuery, PropertyInfo property,
-            IncludeType? includeType) 
+            IncludeType? includeType = null) 
             : base(tcIncludableQuery.Client, ((IBaseQuery<TEntity>)tcIncludableQuery).RequestMethod)
         {
             ((IBaseIncludableQuery) this).Fields = tcIncludableQuery.Fields;
