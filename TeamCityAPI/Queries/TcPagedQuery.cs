@@ -20,7 +20,9 @@ internal class TcPagedQuery<TEntity> : TcBaseQuery<TEntity>, ITcPagedQuery<TEnti
 
     public override async Task<TEntity> GetAsync()
     {
-        return await ((ITcPagedQuery<TEntity>) this).RequestMethod(GetLocator(), GetFieldsUri());
+        var page = await ((ITcPagedQuery<TEntity>) this).RequestMethod(GetLocator(), GetFieldsUri());
+        page.Client = ((IBaseQuery) this).Client;
+        return page;
     }
     public async Task<TEntity> GetAsync(int perPage)
     {
