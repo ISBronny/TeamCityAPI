@@ -7,6 +7,19 @@
 |**Issues**|[![](https://img.shields.io/github/issues/ISBronny/TeamCityAPI.svg)](https://github.com/ISBronny/TeamCityAPI/issues)
 
 You can read about TeamCity REST API [here](https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html).
+
+## Install
+##### Package manager:
+```
+Install-Package TeamCityAPI -Version 0.1.1
+```
+
+##### .NET CLI:
+```
+dotnet add package TeamCityAPI --version 0.1.1
+```
+NuGet: https://www.nuget.org/packages/TeamCityAPI/0.1.1
+
 ## How to use
 ### TeamCityClient
 Create **TeamCityClient** using your server address:
