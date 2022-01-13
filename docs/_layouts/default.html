@@ -71,17 +71,14 @@
 		    <nav id="docs-nav" class="docs-nav navbar">
 				
 			    <ul class="section-items list-unstyled nav flex-column pb-3">
-					{% for category in site.categories %}
-						<li class="nav-item section-title">
+            <li class="nav-item section-title">
 							<a class="nav-link scrollto active" href="#section-1">
-								<span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>
-								{{ category }}
+								<span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction
 							</a>
 						</li>
-    				{% for post in category.last %}
+					  {% for post in site.categories.Introduction %}
 						<li class="nav-item"><a class="nav-link scrollto" href="{{ post.url }}">{{ post.title }}</a></li>
-    				{% endfor %}
-					{% endfor %}
+					  {% endfor %}
 				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Section Item 1.1</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Section Item 1.2</a></li>
