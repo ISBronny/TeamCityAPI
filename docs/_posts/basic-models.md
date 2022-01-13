@@ -1,7 +1,7 @@
 ---
 layout: post
-title: AGSudhs 3!
-category: Introduction
+title: Models
+category: basics
 ---
 
 SOme text 222

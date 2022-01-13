@@ -1,7 +1,7 @@
 ---
 layout: post
-title: AGSudhs 3!
-category: Introduction
+title: Locators
+category: basics
 ---
 
 SOme text 222
