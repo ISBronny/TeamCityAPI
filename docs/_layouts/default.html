@@ -78,9 +78,9 @@
 								{{ category }}
 							</a>
 						</li>
-    					{% for post in category %}
+    				{% for post in category.last %}
 						<li class="nav-item"><a class="nav-link scrollto" href="{{ post.url }}">{{ post.title }}</a></li>
-    					{% endfor %}
+    				{% endfor %}
 					{% endfor %}
 				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Section Item 1.1</a></li>
