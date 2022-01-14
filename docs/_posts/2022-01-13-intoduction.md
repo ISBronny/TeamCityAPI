@@ -1,17 +1,11 @@
 ---
 layout: post
-title: AGSudhs 3!
+title: Installation
 category: introduction
 ---
 
-## Install
-##### Package manager:
-```
-Install-Package TeamCityAPI -Version 0.1.1
-```
+This is an open source project designed to interact with the TeamCity REST API for **.NET**.
 
-##### .NET CLI:
-```
-dotnet add package TeamCityAPI --version 0.1.1
-```
-NuGet: https://www.nuget.org/packages/TeamCityAPI/0.1.1
+Usefull links:
+[TeamCity REST API Reference](https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html)
+[TeamCity REST API GitHub Project](https://github.com/JetBrains/teamcity-rest)
