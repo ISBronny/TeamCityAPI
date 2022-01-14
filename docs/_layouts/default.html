@@ -70,40 +70,40 @@
 				
 			    <ul class="section-items list-unstyled nav flex-column pb-3">
             <li class="nav-item section-title">
-							<a class="nav-link scrollto active" href="#section-1">
+							<a class="nav-link  active" href="{{ site.categories.introduction[0].url }}">
 								<span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction
 							</a>
 						</li>
 					  {% for post in site.categories.introduction %}
-						<li class="nav-item"><a class="nav-link scrollto" href="{{ post.url }}">{{ post.title }}</a></li>
+						<li class="nav-item"><a class="nav-link" href="{{ post.url }}">{{ post.title }}</a></li>
 					  {% endfor %}
 				    
 
             <li class="nav-item section-title">
-							<a class="nav-link scrollto active" href="#section-1">
+							<a class="nav-link  active" href="#section-1">
 								<span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Basics
 							</a>
 						</li>
 					  {% for post in site.categories.basics %}
-						<li class="nav-item"><a class="nav-link scrollto" href="{{ post.url }}">{{ post.title }}</a></li>
+						<li class="nav-item"><a class="nav-link " href="{{ post.url }}">{{ post.title }}</a></li>
 					  {% endfor %}
 
             <li class="nav-item section-title">
-							<a class="nav-link scrollto active" href="#section-1">
+							<a class="nav-link  active" href="#section-1">
 								<span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Models
 							</a>
 						</li>
 					  {% for post in site.categories.models %}
-						<li class="nav-item"><a class="nav-link scrollto" href="{{ post.url }}">{{ post.title }}</a></li>
+						<li class="nav-item"><a class="nav-link " href="{{ post.url }}">{{ post.title }}</a></li>
 					  {% endfor %}
 
             <li class="nav-item section-title">
-							<a class="nav-link scrollto active" href="#section-1">
+							<a class="nav-link  active" href="#section-1">
 								<span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Settings
 							</a>
 						</li>
 					  {% for post in site.categories.Introduction %}
-						<li class="nav-item"><a class="nav-link scrollto" href="{{ post.url }}">{{ post.title }}</a></li>
+						<li class="nav-item"><a class="nav-link " href="{{ post.url }}">{{ post.title }}</a></li>
 					  {% endfor %}
 			    </ul>
 
