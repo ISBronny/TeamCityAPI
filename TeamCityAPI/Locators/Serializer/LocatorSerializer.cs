@@ -4,7 +4,7 @@ using TeamCityAPI.Locators.Common;
 
 namespace TeamCityAPI.Locators.Serializer
 {
-    public class LocatorSerializer
+    internal class LocatorSerializer
     {
         public static string Serialize(Locator locator)
         {

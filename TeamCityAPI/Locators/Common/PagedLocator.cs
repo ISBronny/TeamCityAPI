@@ -2,6 +2,10 @@
 
 public class PagedLocator : Locator
 {
+    internal PagedLocator()
+    {
+        
+    }
     /// <summary>For paginated calls, how many entities to return per page.</summary>
     [Newtonsoft.Json.JsonProperty("count", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
     public int? Count { get; set; }

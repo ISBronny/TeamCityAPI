@@ -5,7 +5,7 @@ using TeamCityAPI.Queries.Interfaces;
 
 namespace TeamCityAPI.Queries;
 
-abstract class TcBaseIncludableQuery<TEntity, TProperty> : TcBaseQuery<TEntity>, IBaseIncludableQuery where TEntity : TcModel
+internal abstract class TcBaseIncludableQuery<TEntity, TProperty> : TcBaseQuery<TEntity>, IBaseIncludableQuery where TEntity : TcModel
     {
         internal TcBaseIncludableQuery(IBaseQuery tcQuery, PropertyInfo property, IncludeType? includeType = null) 
             : base(tcQuery.Client, ((IBaseQuery<TEntity>)tcQuery).RequestMethod)

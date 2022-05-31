@@ -2,7 +2,7 @@
 
 namespace TeamCityAPI.Queries.Common
 {
-    public class Field
+    internal class Field
     {
         public static Field Short => new Field("$short");
         public static Field Long => new Field("$long");

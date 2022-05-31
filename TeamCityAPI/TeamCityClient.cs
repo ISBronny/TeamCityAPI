@@ -116,7 +116,7 @@ namespace TeamCityAPI
         public ITcQuery<VcsRootEntries> VcsRootsOfBuildType =>
             new TcQuery<VcsRootEntries>(this, GetAllVcsRootsOfBuildTypeAsync);
         
-         public async Task<T> GetPage<T>(string href, Type deserializeType) where T : Page
+         internal async Task<T> GetPage<T>(string href, Type deserializeType) where T : Page
          {
 
             var client_ = _httpClient;

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Grynwald.MarkdownGenerator" Version="2.5.34" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TeamCityAPI\TeamCityAPI.csproj" />
+    </ItemGroup>
+
+</Project>
