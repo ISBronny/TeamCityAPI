@@ -13,14 +13,14 @@ You can read about TeamCity REST API [here](https://www.jetbrains.com/help/teamc
 ## Install
 ##### Package manager:
 ```
-Install-Package TeamCityAPI -Version 0.1.1
+Install-Package TeamCityAPI -Version 1.0.0
 ```
 
 ##### .NET CLI:
 ```
-dotnet add package TeamCityAPI --version 0.1.1
+dotnet add package TeamCityAPI --version 1.0.0
 ```
-NuGet: https://www.nuget.org/packages/TeamCityAPI/0.1.1
+NuGet: https://www.nuget.org/packages/TeamCityAPI/1.0.0
 
 
 Docs and examples on [wiki](https://github.com/ISBronny/TeamCityAPI/wiki)
