@@ -10,5 +10,5 @@ public interface ITcPagedQuery : IBaseQuery
 public interface ITcPagedQuery<TEntity> : ITcPagedQuery, IBaseQuery<TEntity> where TEntity : Page
 {
     public ITcPagedQuery<TEntity> WithLocator(PagedLocator locator);
-    public Task<TEntity> GetAsync(int perPage);
+    public Task<TEntity> GetAsync(int perPage = 100);
 }
