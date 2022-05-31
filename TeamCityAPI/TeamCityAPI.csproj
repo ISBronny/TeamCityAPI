@@ -16,11 +16,19 @@
         <PackageProjectUrl>https://github.com/ISBronny/TeamCityAPI/tree/master</PackageProjectUrl>
     </PropertyGroup>
 
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <DocumentationFile>C:\Users\Ivan.Braiko\RiderProjects\TeamCityAPI\TeamCityAPI\TeamCityAPI.xml</DocumentationFile>
+    </PropertyGroup>
+
     <ItemGroup>
       <Folder Include="Attributes" />
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="docfx.console" Version="2.58.9">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
       <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.1">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
