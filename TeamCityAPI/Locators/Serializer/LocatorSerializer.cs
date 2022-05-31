@@ -41,7 +41,7 @@ namespace TeamCityAPI.Locators.Serializer
         
         private static bool IsNullableEnum(System.Type type)
         {
-            System.Type? u = Nullable.GetUnderlyingType(type);
+            System.Type u = Nullable.GetUnderlyingType(type);
             return (u != null) && u.IsEnum;
         }
     }
