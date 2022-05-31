@@ -6,6 +6,8 @@
 |**Downloads**|[![](https://img.shields.io/nuget/dt/TeamCityAPI.svg)](https://www.nuget.org/packages/TeamCityAPI/)
 |**Issues**|[![](https://img.shields.io/github/issues/ISBronny/TeamCityAPI.svg)](https://github.com/ISBronny/TeamCityAPI/issues)
 
+TeamCity API provides a convenient interface for getting data from your TeamCity buildserver.
+
 You can read about TeamCity REST API [here](https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html).
 
 Docs on [wiki](https://github.com/ISBronny/TeamCityAPI/wiki)
