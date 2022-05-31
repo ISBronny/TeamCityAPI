@@ -2,7 +2,7 @@
 ||Badge|
 |------|:------:|
 |**Target Frameworks**|[![Targets](https://img.shields.io/badge/.NET%20Standard-2.1-green.svg)](https://docs.microsoft.com/ru-ru/dotnet/standard/net-standard)
-|**Nuget**|[![]()](http://www.nuget.org/packages/TeamCityAPI)
+|**Nuget**|[![](http://img.shields.io/nuget/v/TeamCityAPI.svg)](http://www.nuget.org/packages/TeamCityAPI)
 |**Downloads**|[![](https://img.shields.io/nuget/dt/TeamCityAPI.svg)](https://www.nuget.org/packages/TeamCityAPI/)
 |**Issues**|[![](https://img.shields.io/github/issues/ISBronny/TeamCityAPI.svg)](https://github.com/ISBronny/TeamCityAPI/issues)
 
